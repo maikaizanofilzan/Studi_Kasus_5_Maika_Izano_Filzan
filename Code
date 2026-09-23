@@ -1,26 +1,34 @@
 def hitung_biaya_hotel(jenis_kamar, lama_menginap):
-    if jenis_kamar == "Standard":
+    if jenis_kamar == "1" or jenis_kamar.lower() == "standard":
         tarif_per_malam = 200000
-    elif jenis_kamar == "Deluxe":
+        nama_kamar = "Standard"
+    elif jenis_kamar == "2" or jenis_kamar.lower() == "deluxe":
         tarif_per_malam = 350000
+        nama_kamar = "Deluxe"
     else:
-        return 0
+        return None, 0
     
     total_biaya = tarif_per_malam * lama_menginap
-    return total_biaya
+    return nama_kamar, total_biaya
 
-tgl_check_in = 10
-tgl_check_out = 13
+print("=== PROGRAM PEMESANAN HOTEL ===")
+print("Pilihan Jenis Kamar:")
+print("1. Standard (Rp200.000 / malam)")
+print("2. Deluxe   (Rp350.000 / malam)")
 
-lama_menginap = tgl_check_out - tgl_check_in
+pilihan_kamar = input("Pilih jenis kamar (1/2): ")
+tgl_check_in = input("Masukkan Tanggal Check-in (Contoh: 10 Desember)  : ")
+tgl_check_out = input("Masukkan Tanggal Check-out (Contoh: 13 Desember) : ")
+lama_menginap = int(input("Masukkan Lama Menginap (malam): "))
 
-jenis_kamar_pilihan = "Deluxe"
+nama_kamar, total_biaya = hitung_biaya_hotel(pilihan_kamar, lama_menginap)
 
-total_biaya = hitung_biaya_hotel(jenis_kamar_pilihan, lama_menginap)
-
-print("=== DETAIL PEMESANAN HOTEL ===")
-print("Jenis Kamar      :", jenis_kamar_pilihan)
-print("Tanggal Check-in : Tanggal", tgl_check_in)
-print("Tanggal Check-out: Tanggal", tgl_check_out)
-print("Lama Menginap    :", lama_menginap, "malam")
-print("Total Biaya      : Rp", total_biaya)
+if nama_kamar is not None:
+    print("\n=== DETAIL PEMESANAN HOTEL ===")
+    print("Jenis Kamar      :", nama_kamar)
+    print("Tanggal Check-in :", tgl_check_in)
+    print("Tanggal Check-out:", tgl_check_out)
+    print("Lama Menginap    :", lama_menginap, "malam")
+    print("Total Biaya      : Rp", total_biaya)
+else:
+    print("\nPilihan jenis kamar tidak valid!")
