@@ -8,3 +8,6 @@ Program Python sederhana untuk menghitung biaya pemesanan kamar hotel berdasarka
 5. return: Ngembaliin hasil hitungan nama kamar dan total harganya biar bisa dipakai di luar fungsi.
 6. input() & int(): Buat nerima masukan dari user via terminal. Dipakai int() biar lama menginap kebaca sebagai angka.
 7. print(): Menampilkan detail pemesanan di terminal.
+
+Berikut adalah hasil output ketika dijalankan
+<img width="374" height="390" alt="Screenshot 2026-09-23 130150" src="https://github.com/user-attachments/assets/d37473c0-d182-4bc6-aded-387c2a87562f" />
