@@ -1,0 +1,26 @@
+def hitung_biaya_hotel(jenis_kamar, lama_menginap):
+    if jenis_kamar == "Standard":
+        tarif_per_malam = 200000
+    elif jenis_kamar == "Deluxe":
+        tarif_per_malam = 350000
+    else:
+        return 0
+    
+    total_biaya = tarif_per_malam * lama_menginap
+    return total_biaya
+
+tgl_check_in = 10
+tgl_check_out = 13
+
+lama_menginap = tgl_check_out - tgl_check_in
+
+jenis_kamar_pilihan = "Deluxe"
+
+total_biaya = hitung_biaya_hotel(jenis_kamar_pilihan, lama_menginap)
+
+print("=== DETAIL PEMESANAN HOTEL ===")
+print("Jenis Kamar      :", jenis_kamar_pilihan)
+print("Tanggal Check-in : Tanggal", tgl_check_in)
+print("Tanggal Check-out: Tanggal", tgl_check_out)
+print("Lama Menginap    :", lama_menginap, "malam")
+print("Total Biaya      : Rp", total_biaya)
