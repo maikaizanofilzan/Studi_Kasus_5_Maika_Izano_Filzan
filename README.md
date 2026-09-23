@@ -1,13 +1,18 @@
 Studi Kasus 5 Tentang Sistem Pemesanan Hotel
 Program Python sederhana untuk menghitung biaya pemesanan kamar hotel berdasarkan jenis kamar dan lama menginap.
 
-1. def hitung_biaya_hotel(...): Fungsi utama buat ngitung total biaya berdasarkan jenis kamar dan jumlah malam menginap.
-2. if-elif-else: Percabangan buat nentuin harga kamar (Standard 200rb/malam, Deluxe 350rb/malam).
-3. .lower(): Biar programnya santai, user ngetik huruf besar atau kecil tetep terbaca sama.
-4. Rumus Biaya: Ngaliin tarif kamar per malam sama lama menginap.
-5. return: Ngembaliin hasil hitungan nama kamar dan total harganya biar bisa dipakai di luar fungsi.
-6. input() & int(): Buat nerima masukan dari user via terminal. Dipakai int() biar lama menginap kebaca sebagai angka.
-7. print(): Menampilkan detail pemesanan di terminal.
+Cara Kerja Program:
+Pas pertama kali dijalankan, program bakal nampilin pilihan jenis kamar beserta tarif per malamnya.
+
+Abis itu, program bakal minta input dari user mulai dari jenis kamar, tanggal check-in, tanggal check-out, sampai lama menginap:
+
+Pilih Jenis Kamar (1/2 atau Standard/Deluxe): Program bakal ngecek inputan user pakai percabangan if-elif-else di dalam fungsi. Metode .lower() dipakai biar user ngetik huruf besar atau kecil tetep terbaca sama. Kalau pilihannya ngasal, bakal muncul pesan kalau pilihan kamar gak valid.
+
+Input Tanggal & Lama Menginap: User memasukkan tanggal check-in, check-out, dan jumlah malam menginap. Inputan lama menginap diubah pakai int() biar kebaca sebagai angka bulat.
+
+Hitung Biaya: Fungsi bakal ngaliin tarif kamar per malam sama lama menginap, lalu ngembaliin (return) nama kamar dan total biayanya.
+
+Di bagian akhir, program bakal nampilin ringkasan detail pemesanan hotel mulai dari jenis kamar, tanggal check-in, tanggal check-out, lama menginap, sampai total biaya yang harus dibayar.
 
 Berikut adalah hasil output ketika dijalankan
 <img width="374" height="390" alt="Screenshot 2026-09-23 130150" src="https://github.com/user-attachments/assets/d37473c0-d182-4bc6-aded-387c2a87562f" />
